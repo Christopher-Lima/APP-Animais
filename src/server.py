@@ -6,12 +6,12 @@ from uuid import uuid4
 
 app = FastAPI()
 
-origens = ['http://localhost:5500']
+origins = ['http://localhost:5500']
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credential=true,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
 )
